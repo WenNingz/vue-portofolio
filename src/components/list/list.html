@@ -1,0 +1,6 @@
+<ol v-if="ordered" class="list">
+  <li v-for="item in items" class="list-element">{{ item }}</li>
+</ol>
+<ul v-else class="list">
+  <li v-for="item in items" class="list-element">{{ item }}</li>
+</ul>
