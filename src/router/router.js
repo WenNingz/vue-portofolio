@@ -1,39 +1,40 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from 'app/components/home/home'
-// import About from '@/components/About'
-// import Skill from '@/components/Skill'
-// import Portofolio from '@/components/Portofolio'
-// import Contact from '@/components/Contact'
+import Home from '@/pages/Home'
+import About from '@/pages/About'
+import Skill from '@/pages/Skill'
+import Portofolio from '@/pages/Portofolio'
+import Contact from '@/pages/Contact'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
       name: 'Home',
       component: Home
     }, 
-    // {
-    //   path: '/about',
-    //   name: 'About',
-    //   component: About 
-    // }, 
-    // {
-    //   path: '/skills',
-    //   name: 'Skill',
-    //   component: Skill 
-    // }, 
-    // {
-    //   path: '/portfolio',
-    //   name: 'My Works',
-    //   component: Portofolio 
-    // }, 
-    // {
-    //   path: '/contact',
-    //   name: 'Contact',
-    //   component: Contact 
-    // }
+    {
+      path: '/about',
+      name: 'About',
+      component: About 
+    }, 
+    {
+      path: '/skills',
+      name: 'Skill',
+      component: Skill 
+    }, 
+    {
+      path: '/portfolio',
+      name: 'My Works',
+      component: Portofolio 
+    }, 
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: Contact 
+    }
   ]
 })

@@ -1,17 +1,18 @@
 <template>
-  <div class="full-width center-content">
-    <h1>Hi!</h1>
-    <vc-hello name="World" />
+  <div>
+    <router-link to="/">Home</router-link>
+    <router-link to="/about">About</router-link>
+    <router-link to="/skills">Skill</router-link>
+    <router-link to="/portfolio">My Works</router-link>
+    <router-link to="/contact">Contact</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 
-import Hello from './components/Hello.vue'
-
 export default {
   components: {
-    [Hello.name]: Hello
   }
 }
 
