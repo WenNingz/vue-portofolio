@@ -1,23 +1,27 @@
 <template>
   <div>
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
-    <router-link to="/skills">Skill</router-link>
-    <router-link to="/portfolio">My Works</router-link>
-    <router-link to="/contact">Contact</router-link>
+    <Navbar></Navbar>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 
+import Navbar from '@/pages/layout/navbar'
+
 export default {
   components: {
+    [Navbar.name]: Navbar
   }
 }
 
 </script>
 
 <style scoped>
+
+a {
+  padding: 1rem;
+  background: yellow;
+}
 
 </style>
