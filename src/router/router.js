@@ -5,6 +5,7 @@ import About from '@/pages/About'
 import Skill from '@/pages/Skill'
 import Portofolio from '@/pages/Portofolio'
 import Contact from '@/pages/Contact'
+import Sample from '@/pages/Sample'
 
 Vue.use(Router)
 

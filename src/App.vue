@@ -1,23 +1,26 @@
 <template>
-  <div>
-    <Navbar></Navbar>
+  <div class="container">
+    <Header></Header>
     <router-view></router-view>
+    <Navbar></Navbar>
   </div>
 </template>
 
 <script>
 
+import Header from '@/pages/layout/header'
 import Navbar from '@/pages/layout/navbar'
 
 export default {
   components: {
-    [Navbar.name]: Navbar
+    [Navbar.name]: Navbar,
+    [Header.name]: Header
   }
 }
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 a {
   padding: 1rem;

@@ -10,9 +10,6 @@ background ... #FFF;
 
 : Table Of Contents :
 Resets
-Defaults
-Typography
-Forms
 Layout
 Links
 Menus
@@ -25,22 +22,14 @@ Content
   Contact
 ---------------------------------------------------- */
 
-
 /* -------------------- Resets --------------------- */
-
-body, form, fieldset, ol, ul, li, h1, h2, h3, h4, h5, h6, p {
-  margin:0;
-  padding:0;
-}
-
-img {
-  border:0;
-  vertical-align:bottom; /* set vertical align to bottom for IE */
-}
+@import '../../node_modules/normalize.css/normalize.css';
 
 /* ------------------- Defaults ------------------- */
 * {
   margin:0 auto;
+  padding: 0;
+  min-width:100%;
 }
 
 html {
@@ -66,7 +55,7 @@ p, ul, ol {
 }
 
 ul {
-  margin:0 0 1em 25px;
+  /*margin:0 0 1em 25px;*/
   list-style:none;
 }
 
@@ -99,31 +88,76 @@ label {
 input {
   vertical-align:middle;
 }
+
 textarea { 
   overflow:auto; /* removes scrollbar from IE when none is needed */
 }
 
 /* -------------------- Layout --------------------- */
-#wrap {
-  margin:0 auto; /* centers layout */
-  min-height:100%; /* height 100% in all modern browsers */
+
+/*-----------------------------------------------------
+  - CSS Grid layout for wider screens
+  - Browser supports grid:
+-----------------------------------------------------*/
+.container {
+  min-height: 100%;
 }
 
-#head {
+#header {
+  background-color: blue;
 }
 
-#nav {
+#main {
+  background-color: red;
 }
 
-#content {
+#navbar {
+  background-color: yellow;
 }
 
-#left {
-  float:left;
+.content-left {
+  background-color: pink;
 }
 
-#foot {
-  clear:both;
+.content-right {
+  background-color:brown;
+}
+
+@supports (display:grid) {
+  .container {
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:0.5fr 4fr 0.5fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "navbar";
+    grid-gap: 0;
+  }
+
+  #header {
+    grid-area:header;
+  }
+
+  #main {
+    grid-area:main;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:"mainleft mainright";
+    grid-gap:0;
+  }
+
+  #navbar {
+    grid-area:navbar;
+  }
+
+  .content-left {
+    grid-area:mainleft;
+  }
+
+  .content-right {
+    grid-area:mainright;
+  }
 }
 
 /* ------------------- Links ---------------------- */
@@ -145,20 +179,17 @@ a:hover, a:focus, a:active {
 /* --------------------- Menus -------------------- */
 /* Main Menu */
 #nav {
-
 }
 
 #nav li {
-  /*float:left;*/
 }
 
 #nav li a {
-  display:block;
-  text-decoration:none;
 }
 
 #nav a:hover, #nav a:focus, #nav a:active {
   color:#333333;
+  transition: .3s background-color;
 }
 
 /* Foot Menu */

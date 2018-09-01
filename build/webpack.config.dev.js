@@ -49,11 +49,11 @@ module.exports = {
       },
       
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          // 'vue-style-loader',
-          'css-loader'
+          'style-loader',
+          'css-loader',
+          'sass-loader'
         ]
       },
       {
@@ -78,8 +78,8 @@ module.exports = {
       toType: 'dir'
     }]),
     new MiniCssExtractPlugin({
-    filename: 'main.css'
-  })
+      filename: 'main.css'
+    })
   ],
 
   resolve: {

@@ -1,6 +1,6 @@
 <template>
   <nav id="navbar" class="navbar">
-    <ul id="nav" class="navbar">
+    <ul id="nav" class="nav">
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="/about">About</router-link></li>
       <li><router-link to="/skills">Skill</router-link></li>
@@ -17,6 +17,6 @@ export default {
 }
 
 </script>
-<style scoped>
+<style scoped lang="scss">
 
 </style>
