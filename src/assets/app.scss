@@ -1,7 +1,7 @@
 /* ----------------------------------------------------
 Stylesheet for http://www.portofolio.com
 
-Updated: 21/08/2018
+Created: 21/08/2018
 Author: Dina Setiana
 
 ------------------------------------------------------- 
@@ -10,10 +10,12 @@ background ... #FFF;
 
 : Table Of Contents :
 Resets
+Defaults
 Layout
 Links
 Menus
 Global Classes
+Components
 Content
   Home
   About
@@ -26,23 +28,14 @@ Content
 @import '../../node_modules/normalize.css/normalize.css';
 
 /* ------------------- Defaults ------------------- */
-* {
-  margin:0 auto;
-  padding: 0;
-  min-width:100%;
-}
-
-html {
-  height:100%; 
-  overflow:auto; /* triggers 100% height in Opera 9.5 */
-  overflow-y:scroll; /* creates a horizontal scrollbar, for a more consistent look & feel */
-}
-
-body {
+html{
+  width:100%;
   height:100%;
-  font:100%/1.5 Arial, Helvetica, sans-serif; /* 100% = 16px, 93.75% = 15px, 87.5% = 14px, 81.25% = 13px, 75% = 12px - font-size in % prevents IE's resize bug */
-  background:#FDFDFD;
-  color:#333;
+}
+
+body{
+  width:100%;
+  height:100%;
 }
 
 /* ------------------ Typography ------------------- */
@@ -57,6 +50,7 @@ p, ul, ol {
 ul {
   /*margin:0 0 1em 25px;*/
   list-style:none;
+  padding:0;
 }
 
 h1 { font-size:1.6em; }
@@ -112,7 +106,7 @@ textarea {
 }
 
 #navbar {
-  background-color: yellow;
+  background-color: purple;
 }
 
 .content-left {
@@ -127,7 +121,7 @@ textarea {
   .container {
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows:0.5fr 4fr 0.5fr;
+    grid-template-rows:0.5fr 4.2fr 0.3fr;
     grid-template-areas:
       "header"
       "main"
@@ -167,9 +161,9 @@ a {
   outline:0; /* removes dotted border */
 }
 
-a:visited {
-  color:#999;
-}
+// a:visited {
+//   color:#000;
+// }
 
 a:hover, a:focus, a:active {
   text-decoration:none;
@@ -177,34 +171,38 @@ a:hover, a:focus, a:active {
 }
 
 /* --------------------- Menus -------------------- */
-/* Main Menu */
-#nav {
+/* Navbar Menu */
+#navbar {
+  display:flex;
+  // display:grid;
+  // grid-template-columns:repeat(auto-fill,minmax(20%, 1fr));
 }
 
-#nav li {
+#navbar a {
+  display:flex;
+  flex:1;
+  border-bottom:3px solid black;
+  background-color:violet;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  width:100%;
 }
 
-#nav li a {
-}
-
-#nav a:hover, #nav a:focus, #nav a:active {
+#navbar a:hover, #navbar a:focus, #navbar a:active {
   color:#333333;
   transition: .3s background-color;
+  background:gray;
 }
 
-/* Foot Menu */
-#foot ul {
+/* Header Menu */
+#header {
 }
 
-#foot li {
-}
-
-#foot a {
+#header a {
 text-decoration:none;
 }
 
-#foot a:hover, #foot a:focus, #foot a:active {
-}
 
 /* ---------------- Global Classes --------------- */
 .clear {
@@ -228,4 +226,22 @@ text-decoration:none;
 * html .clearfix {height:1%;}
 .clearfix {display:block;}
 /* End hide */
+
+
+/* ------------------ Components ----------------- */
+.button {
+  background-color: #4CAF50;
+  border:1px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 /* ------------------- Content ------------------- */
+
+/* -------------------- Home --------------------- */
+

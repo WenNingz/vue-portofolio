@@ -60,6 +60,10 @@ module.exports = {
         test: /\.(js|vue)$/,
         use: 'eslint-loader',
         enforce: 'pre'
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: 'file-loader'
       }
     ]
   },
@@ -72,14 +76,9 @@ module.exports = {
       template: 'index.html',
       inject: true
     }),
-    new CopyWebpackPlugin([{
-      from: resolve('src/assets/img'),
-      to: resolve('dist/assets/img'),
-      toType: 'dir'
-    }]),
     new MiniCssExtractPlugin({
       filename: 'main.css'
-    })
+    }),
   ],
 
   resolve: {
