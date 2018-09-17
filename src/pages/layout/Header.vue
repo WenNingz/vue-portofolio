@@ -1,6 +1,8 @@
 <template>
   <nav id="header" class="header">
-    <img class="logo" :src="logo" />
+    <router-link to="/">
+      <img class="logo" :src="logo" />
+    </router-link>
   </nav>
 </template>
 
@@ -18,5 +20,8 @@ export default {
 
 </script>
 <style scoped lang="scss">
-
+.logo {
+  height:100%;
+  width:auto;
+}
 </style>

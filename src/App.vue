@@ -8,8 +8,8 @@
 
 <script>
 
-import Header from '@/pages/layout/header'
-import Navbar from '@/pages/layout/navbar'
+import Header from '@/pages/layout/Header'
+import Navbar from '@/pages/layout/Navbar'
 
 export default {
   components: {
