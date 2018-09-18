@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <Header></Header>
-    <router-view></router-view>
+    <transition name="router-anim">
+      <router-view></router-view>
+    </transition>
     <Navbar></Navbar>
   </div>
 </template>

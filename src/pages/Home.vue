@@ -4,7 +4,7 @@
       <img class="content-logo" :src="logo" alt="Dina Setiana">
     </div>
     <div class="content-right">
-      <h1 class="title">I'm<br/>Dina Setiana</h1>
+      <h1 class="title animated tada">I'm<br/>Dina Setiana</h1>
       <p class="subtitle">a Developer</p>
       <link-button class="pos-bottom" text="Find out more ABOUT me!" link="/about"></link-button>
     </div>
@@ -29,14 +29,6 @@ export default {
 
 </script>
 <style scoped lang="scss">
-
-div[class^="content"] {
-  margin:4em;
-}
-
-.content-right {
-  position:relative;
-}
 .content-logo {
   height: 100%;
   width: auto;
