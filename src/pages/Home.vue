@@ -1,7 +1,7 @@
 <template>
   <main id="main" class="main">
     <div class="content-left">
-      <img class="content-logo" :src="logo" alt="Dina Setiana">
+      <!-- <img class="content-logo" :src="logo" alt="Dina Setiana"> -->
     </div>
     <div class="content-right">
       <h1 class="title animated tada">I'm<br/>Dina Setiana</h1>

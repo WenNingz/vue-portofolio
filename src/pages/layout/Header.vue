@@ -1,16 +1,16 @@
 <template>
-  <nav id="header" class="header">
+  <header id="header" class="header">
     <router-link to="/">
       <img class="logo" :src="logo" />
     </router-link>
-  </nav>
+  </header>
 </template>
 
 <script>
 import Logo from '@/assets/img/logo_90.png'
 
 export default {
-  name: 'Header',
+  name: 'v-header',
   data: function () {
     return {
       logo: Logo

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+// fonts
+$font-stack: 'Open Sans', sans-serif;
+$font-weight-regular: 400;
+$font-weight-heavy: 600;  
+$font-height: 1.5;
+//font-size: minimumPixel + range * ((viewportWidth - minScreenWidth) / maxScreenWidth)
+
+// colors
+$white: #DFE6E9;
+
+// complementary: exist opposite each other
+$orange: #CE4A00;
+
+//analogus: composed of a root color and two or more nearby colors
+$base-black: #1B1B1B;
+$light-black: #332E33;
+$dark-black: #141414;
+
+$base-blue: #00CEC9;
+$dark-blue: #00817E;
+$light-blue: #19FFF9;
+
+$breakpoint-width: 768px;
+
+$media-query: "only screen and (min-width: #{$breakpoint-width})"
+

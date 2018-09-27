@@ -1,0 +1,264 @@
+/* ----------------------------------------------------
+Stylesheet for http://www.portofolio.com
+
+Created: 21/08/2018
+Author: Dina Setiana
+
+------------------------------------------------------- 
+: Variable : 
+
+: Table Of Contents :
+Imports
+Defaults
+Layouts
+Menus
+Global Classes
+Animations
+Components
+Pages
+---------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+/* : Variable : */
+
+// fonts
+$font-stack: 'Open Sans', sans-serif;
+$font-weight-regular: 400;
+$font-weight-heavy: 600;  
+$font-height: 1.5;
+
+// colors
+$white: #DFE6E9;
+
+// complementary: exist opposite each other
+$orange: #CE4A00;
+
+//analogus: omposed of a root color and two or more nearby colors
+$base-black: #1B1B1B;
+$light-black: #332E33;
+$dark-black: #141414;
+
+$base-blue: #00CEC9;
+$dark-blue: #00817E;
+$light-blue: #19FFF9;
+
+/* -------------------- Imports --------------------- */
+@import 'reset';
+
+/* ------------------- Defaults ------------------- */
+html, body{
+  font-family: $font-stack;
+  background-color:$base-black;
+  color: $white;
+  font-height: $font-height;
+}
+
+// typography
+h1, h2, h3, h4, h5, h6, p {
+  margin:0 0 1em;
+}
+
+p, ul, ol {
+  font-size:1em;
+}
+
+ul {
+  list-style:none;
+  padding:0;
+}
+
+h1 { font-size:1.6em; }
+h2 { font-size:1.5em; }
+h3 { font-size:1.4em; }
+h4 { font-size:1.3em; }
+h5 { font-size:1.2em; }
+h6 { font-size:1.1em; }
+
+// forms
+fieldset {
+  border:none;
+}
+
+form:focus {
+  outline:0; /* removes Safari's blue border */
+}
+
+input, select, textarea {
+  font-size:1em;
+  font-family:$font-stack;
+}
+
+label {
+  cursor:pointer;
+  vertical-align:middle;
+}
+
+input {
+  vertical-align:middle;
+}
+
+textarea { 
+  overflow:auto; /* removes scrollbar from IE when none is needed */
+}
+
+// links
+a {
+  text-decoration:underline;
+  color:$white;
+  outline:0; /* removes dotted border */
+}
+
+a:hover, a:focus, a:active {
+  text-decoration:none;
+/* add-custom:outline-rule-here; */
+}
+
+// grid
+$breakpoint-small: 33.75em; // 540px
+$breakpoint-med: 45em; // 720px
+$breakpoint-large: 60em; // 960px
+
+/* -------------------- Layouts ------------------- */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (min-width: $breakpoint-med) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+nav {
+  flex:1;
+  padding-bottom: 5px;
+}
+
+/* --------------------- Menus -------------------- */
+
+#navbar {
+  background-color:$dark-black;
+}
+
+#navbar a {
+  font-weight:$font-weight-heavy;
+  text-align: center;
+  text-decoration:none;
+  transition:all 1s ease-out;
+  -webkit-transition:all 1s ease-out;
+}
+
+@media (min-width: 768px) {
+  #navbar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+  }
+  
+  #navbar a {
+    padding: 10px 0;
+    border-top:3px solid $white;
+  }
+}
+
+
+
+#navbar a:hover, #navbar a:focus, #navbar a:active {
+  transition: .5s background-color;
+  background:black;
+}
+
+#navbar > .exact-active {
+  background:black;
+  border-top:3px solid $base-blue;
+  transition:all 1s ease-out;
+  -webkit-transition:all 1s ease-out;
+}
+
+
+/* ------------------ Animations ----------------- */
+
+%fade-in-animation {
+  animation: fadeIn 2s;
+  animation-delay: 1.5s;
+  opacity:0;
+}
+
+%fade-out-animation {
+  animation: fadeOut 1s;
+}
+
+@keyframes fadeOut {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50px);
+    opacity:0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    transform:translateX(-50px);
+    opacity:0;
+  }
+  to {
+    transform:translateX(0);
+    opacity:1;
+  }
+}
+
+.router-anim-enter-active {
+  @extend %fade-in-animation;
+}
+
+.router-anim-leave-active {
+  @extend %fade-out-animation;
+}
+
+
+/* ---------------- Global Classes --------------- */
+
+
+/* ------------------ Components ----------------- */
+.button {
+  display:inline-block;
+  border:1px solid $base-blue;
+  color:$base-blue;
+  padding:15px 30px;
+  text-align:center;
+  text-decoration:none;
+  cursor:pointer;
+  transition:all .5s ease-out;
+  -webkit-transition:all .5s ease-out;
+  background:linear-gradient(to right, $light-blue 50%, transparent 50%);
+  background-position: right bottom;
+  background-size: 200% 100%;
+}
+
+.button:hover {
+  background-position: left bottom; 
+  color: $dark-black;
+}
+
+/* ------------------- Pages ------------------- */

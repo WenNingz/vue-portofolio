@@ -1,0 +1,87 @@
+@import "utilities/variables";
+
+form  {
+  width: 100%;
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="number"],
+input[type="file"],
+input[type="tel"],
+input[type="url"],
+select,
+textarea,
+textarea[type=text]  {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  transition: all .2s ease;
+  border-width: 1px;
+  border-color: $base-blue;
+  border-style: solid;
+  border-radius: 2px;
+  font-family:$font-stack;
+  font-size:1em;
+
+  &:focus  {
+    border-color: $base-black;
+    transition: all .2s ease;
+    outline:0; /* removes Safari's blue border */
+  }
+}
+
+input, textarea  {
+  padding: .9rem 1rem .9rem 2rem;
+}
+
+select  {
+  background: #fff;
+  padding: .9rem .5rem .9rem .5rem;
+  margin: 1.2rem 0;
+}
+
+textarea  {
+  resize: vertical;
+  min-height: 12rem;
+  margin: 0;
+}
+
+
+label  {
+  cursor: pointer;
+  vertical-align:middle;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+}
+
+fieldset {
+  border:none;
+}
+
+form:focus {
+  
+}
+
+
+label {
+  cursor:pointer;
+}
+
+input {
+  vertical-align:middle;
+}
+
+textarea { 
+  overflow:auto; /* removes scrollbar from IE when none is needed */
+}
