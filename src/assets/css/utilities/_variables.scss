@@ -3,7 +3,7 @@
 // fonts
 $font-stack: 'Open Sans', sans-serif;
 $font-weight-regular: 400;
-$font-weight-heavy: 600;  
+$font-weight-heavy: 600;
 $font-height: 1.5;
 //font-size: minimumPixel + range * ((viewportWidth - minScreenWidth) / maxScreenWidth)
 
@@ -25,4 +25,3 @@ $light-blue: #19FFF9;
 $breakpoint-width: 768px;
 
 $media-query: "only screen and (min-width: #{$breakpoint-width})"
-

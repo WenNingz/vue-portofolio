@@ -1,5 +1,5 @@
 <template>
-  <nav id="navbar" class="navbar">
+  <nav id="navbar" class="navbar sub-container">
     <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
     <router-link to="/skills">Skill</router-link>

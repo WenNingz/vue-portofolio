@@ -1,3 +1,5 @@
+/*
+
 .container {
   margin: 0 auto;
   display: flex;
@@ -29,4 +31,47 @@ main {
 nav {
   flex:1;
   padding-bottom: 5px;
+}
+
+*/
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr auto;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve {
+  grid-column-end: span 12;
+}
+
+@media #{$media-query} {
+  .one { grid-column-end: span 1 }
+  .two { grid-column-end: span 2 }
+  .three { grid-column-end: span 3 }
+  .four { grid-column-end: span 4 }
+  .five { grid-column-end: span 5 }
+  .six { grid-column-end: span 6 }
+  .seven { grid-column-end: span 7 }
+  .eight { grid-column-end: span 8 }
+  .nine { grid-column-end: span 9 }
+  .ten { grid-column-end: span 10 }
+  .eleven { grid-column-end: span 11 }
+}
+
+.merge-two-rows { grid-row-end: span 2 }
+.merge-three-rows { grid-row-end: span 3 }
+.merge-four-rows { grid-row-end: span 4 }
+.merge-five-rows { grid-row-end: span 5 }
+.merge-six-rows { grid-row-end: span 6 }
+
+
+//splits up the page horizontally
+.row {
+  clear: both;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }

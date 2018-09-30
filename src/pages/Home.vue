@@ -1,5 +1,5 @@
 <template>
-  <main id="main" class="main">
+  <main id="main" class="main eleven">
     <div class="content-left">
       <!-- <img class="content-logo" :src="logo" alt="Dina Setiana"> -->
     </div>

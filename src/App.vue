@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <router-view></router-view>
-    <v-navbar></v-navbar>    
+    <v-navbar></v-navbar>
   </div>
 </template>
 
@@ -20,10 +20,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-a {
-  padding: 1rem;
-  background: yellow;
-}
-
 </style>
