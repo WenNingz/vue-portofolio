@@ -1,19 +1,21 @@
 <template>
-  <main id="main" class="main eleven">
-    <div class="content-left">
-      <!-- <img class="content-logo" :src="logo" alt="Dina Setiana"> -->
-    </div>
-    <div class="content-right">
-      <h1 class="title animated tada">I'm<br/>Dina Setiana</h1>
-      <p class="subtitle">a Developer</p>
-      <link-button class="pos-bottom" text="Find out more ABOUT me!" link="/about"></link-button>
+  <main id="main" class="main twelve">
+    <div class="row">
+      <div class="six">
+        <img class="content-logo" :src="logo" alt="Dina Setiana">
+      </div>
+      <div class="six rel">
+          <h1 class="title animated tada">I'm<br/>Dina Setiana</h1>
+          <p class="subtitle">a Developer</p>
+          <link-button class="bottom" text="Find out more ABOUT me!" link="/about"></link-button>
+      </div>
     </div>
   </main>
 </template>
 
 <script>
 import LinkButton from '@/components/link-button/LinkButton'
-import Logo from '@/assets/img/logo_big.png'
+import Logo from '@/assets/img/Logo-Big-Light.png'
 
 export default {
   name: 'Home',
@@ -29,9 +31,14 @@ export default {
 
 </script>
 <style scoped lang="scss">
+.row {
+  padding: 2em;
+  grid-gap: 2em;
+}
 .content-logo {
-  height: 100%;
-  width: auto;
+  object-fit: contain;
+  max-height: 100%;
+  width: 100%;
 }
 
 .title {
@@ -40,5 +47,10 @@ export default {
 
 .subtitle {
   font-size:2.5vw;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
 }
 </style>

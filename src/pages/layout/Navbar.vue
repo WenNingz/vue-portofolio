@@ -1,11 +1,12 @@
 <template>
-  <nav id="navbar" class="navbar sub-container">
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
-    <router-link to="/skills">Skill</router-link>
-    <router-link to="/portfolio">My Works</router-link>
-    <router-link to="/contact">Contact</router-link>
-
+  <nav id="navbar" class="twelve">
+    <div class="grid-auto-cols navbar">
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/skills">Skill</router-link>
+      <router-link to="/portfolio">My Works</router-link>
+      <router-link to="/contact">Contact</router-link>
+    </div>
 
     <!-- <ul id="nav" class="nav">
       <li><router-link to="/">Home</router-link></li>

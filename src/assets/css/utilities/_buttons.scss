@@ -1,11 +1,23 @@
 @import "utilities/variables";
 
-.btn  {
-  padding: 1rem 1.5rem;
-  color: #fff;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: bold;
+.button  {
+  display:inline-block;
+  border:1px solid $base-blue;
+  color:$base-blue;
+  padding:15px 30px;
+  text-align:center;
+  text-decoration:none;
+  cursor:pointer;
+  transition:all .5s ease-out;
+  -webkit-transition:all .5s ease-out;
+  background:linear-gradient(to right, $light-blue 50%, transparent 50%);
+  background-position: right bottom;
+  background-size: 200% 100%;
+
+  &:hover {
+    background-position: left bottom;
+    color: $dark-black;
+  }
 }
 
 .btn-primary  {
@@ -22,8 +34,8 @@
   transition: all 0.5s;
 
   &:hover {
-    color: #fff;
-    transition: all 0.5s;
+    background-position: left bottom;
+    color: $dark-black;
   }
 }
 

@@ -16,3 +16,25 @@ Author: Dina Setiana
 
 @import 'reset';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+.navbar a {
+  font-weight:$font-weight-heavy;
+  text-align: center;
+  background-color: $dark-black;
+  text-decoration:none;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  transition:all 1s ease-out;
+  -webkit-transition:all 1s ease-out;
+}
+
+.navbar a:hover, .navbar a:focus, .navbar a:active {
+  transition: .5s background-color;
+  background: $dark-blue;
+}
+
+.navbar > .exact-active {
+  background: $dark-blue;
+  transition:all 1s ease-out;
+  -webkit-transition:all 1s ease-out;
+}
