@@ -5,6 +5,7 @@ import About from '@/pages/About'
 import Skill from '@/pages/Skill'
 import Portofolio from '@/pages/Portofolio'
 import Contact from '@/pages/Contact'
+import UnderConstruction from '@/pages/UnderConstruction'
 import Sample from '@/pages/Sample'
 
 Vue.use(Router)
@@ -18,26 +19,26 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
-    }, 
+    },
     {
       path: '/about',
       name: 'About',
-      component: About 
-    }, 
+      component: UnderConstruction
+    },
     {
       path: '/skills',
       name: 'Skill',
-      component: Skill 
-    }, 
+      component: Skill
+    },
     {
       path: '/portfolio',
       name: 'My Works',
-      component: Portofolio 
-    }, 
+      component: Portofolio
+    },
     {
       path: '/contact',
       name: 'Contact',
-      component: Contact 
+      component: Contact
     }
   ]
 })
